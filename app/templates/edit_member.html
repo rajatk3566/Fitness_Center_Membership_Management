@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Member</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+</head>
+<body>
+    <div style="margin-top: 50px;" class="ui container">
+        <h1 class="ui center aligned header">Edit Member</h1>
+        <br>
+
+        <!-- Edit Member Form -->
+        <form class="ui form" method="POST">
+            <div class="ui grid">
+                <div class="sixteen wide column">
+                    <div class="ui fields">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" value="{{ member.name }}" placeholder="Enter name...">
+                        </div>
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" value="{{ member.email }}" placeholder="Enter email...">
+                        </div>
+                        <div class="field">
+                            <label for="phone_number">Phone Number</label>
+                            <input type="text" name="phone_number" value="{{ member.phone_number }}" placeholder="Enter phone number...">
+                        </div>
+                        <div class="field">
+                            <label for="join_date">Join Date</label>
+                            <input type="date" name="join_date" value="{{ member.join_date.strftime('%Y-%m-%d') }}" placeholder="Enter join date...">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buttons with spacing -->
+                <div class="sixteen wide column">
+                    <button class="ui blue button" type="submit">Update</button>
+                    <a href="/view_members" class="ui blue button" style="margin-left: 10px;">View All Members</a>
+                </div>
+            </div>
+        </form>
+        
+    </div>
+</body>
+</html>
