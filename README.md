@@ -44,7 +44,7 @@ https://github.com/rajatk3566/Fitness_Center_Membership_Management.git
 
 ```bash
 python -m venv venv
-source venv/bin/activate
+source .venv/bin/activate
 ```
 
 3. To Install dependencies:
